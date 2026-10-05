@@ -2,7 +2,7 @@
     "name": "harmonyy",
     "description": "a keyless search tool for music streaming services",
     "type": "module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/VillainsRule/harmony",
     "repository": {
         "type": "git",

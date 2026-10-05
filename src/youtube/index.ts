@@ -10,7 +10,7 @@ export default class YoutubeMusic implements App {
     $googVisitorId: string;
     $cookieString: string;
 
-    async $getData() {
+    async $getData(): Promise<void> {
         const dataReq = await fetch('https://music.youtube.com/sw.js_data');
         const dataRes = await dataReq.text();
         const dataArr = dataRes.split(',');
@@ -20,7 +20,7 @@ export default class YoutubeMusic implements App {
         this.$googVisitorId = dataArr[15].slice(1, -1);
     }
 
-    async $getCookies() {
+    async $getCookies(): Promise<void> {
         const data = await fetch('https://music.youtube.com');
         this.$cookieString = data.headers.getSetCookie().map(e => e.split(' Domain')[0]).join(' ');
     }
