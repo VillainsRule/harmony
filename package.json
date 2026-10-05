@@ -1,0 +1,61 @@
+{
+    "name": "harmonyy",
+    "description": "a keyless search tool for music streaming services",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/VillainsRule/harmony",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VillainsRule/harmony.git"
+    },
+    "bugs": {
+        "url": "https://github.com/VillainsRule/harmony/issues"
+    },
+    "keywords": [
+        "spotify",
+        "apple music",
+        "youtube music"
+    ],
+    "exports": {
+        "./package.json": "./package.json",
+        "./apple": {
+            "import": "./dist/apple/index.js",
+            "types": "./dist/apple/index.d.ts"
+        },
+        "./spotify": {
+            "import": "./dist/spotify/index.js",
+            "types": "./dist/spotify/index.d.ts"
+        },
+        "./youtube": {
+            "import": "./dist/youtube/index.js",
+            "types": "./dist/youtube/index.d.ts"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "apple": [
+                "dist/apple/index.d.ts"
+            ],
+            "spotify": [
+                "dist/spotify/index.d.ts"
+            ],
+            "youtube": [
+                "dist/youtube/index.d.ts"
+            ]
+        }
+    },
+    "files": [
+        "dist/**/*.js",
+        "dist/**/*.d.ts",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "bunx --bun tsc -P tsconfig.build.json",
+        "prod": "bun run build && npm publish"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.4.2",
+        "typescript": "^7.0.2"
+    }
+}
