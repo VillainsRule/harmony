@@ -99,5 +99,9 @@ export interface App {
 - `search`, `getAlbum` and `getArtist` are implemented by every service.
 - `getPopular` and `getTrack` are optional and depend on whether the service supports it.
 
-<br><br>
+<br>
+
+> *looking for searchtify? the same functionality exists in <code>harmonyy/spotify</code>, and the old code has been moved to <a href='https://github.com/VillainsRule/harmony/tree/searchtify'>a branch</a>*
+
+<br>
 <h5 align='center'>made with ❤️</h5>
