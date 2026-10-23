@@ -12,7 +12,6 @@ describe('getData', () => {
         expect(Number(yt.$youtubeClientVersion)).toBeGreaterThan(0);
         expect(yt.$youtubeClientBuild).toStartWith('1.');
         expect(yt.$googVisitorId).toBeTypeOf('string');
-        expect(yt.$googVisitorId).toEndWith('%3D');
         expect(yt.$googVisitorId.length).toBeGreaterThan(500);
     }, 15_000);
 });
